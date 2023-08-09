@@ -15,6 +15,7 @@ const QuoteCardList = ({ data, handleTagClick }) => {
 }
 
 const Feed = () => {
+  console.log(process.env.NEXTAUTH_SECRET)
   const [allPosts, setAllPosts] = useState([])
 
   // Search states
