@@ -47,8 +47,12 @@ const MyProfile = () => {
 
   return (
     <Profile
-      name='My'
-      desc='Welcome to your personalized profile page. Share your exceptional quotes and inspire others with the power of your imagination'
+      name={session?.user ? 'My' : ''}
+      desc={
+        session?.user
+          ? 'Welcome to your personalized profile page. Share your exceptional quotes and inspire others with the power of your imagination'
+          : 'You need to sign in first'
+      }
       data={myPosts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
